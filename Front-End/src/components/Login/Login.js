@@ -25,17 +25,23 @@ const Login = () => {
         console.log(e.response.data.error);
         showAlert("Invalid Credentials please check!!!!!", "danger");
       })
-    if (response.data.success) {
+    try {
       // Save the authtoken and redirect
       localStorage.setItem("token", response.data.authtoken);
       showAlert("Logged In Successfully!!!", "success");
       navigate("/dashboard");
+      setCredentials({ email: "", password: "" });
     }
-    setCredentials({ email: "", password: "" });
-  };
+    
+    catch{
+      showAlert("Invalid Credentials please check!!!!!", "danger");
+    }
+  }
   const onChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
   };
+  
+
 
   return (
     <>

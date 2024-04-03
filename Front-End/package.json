@@ -39,17 +39,6 @@
       "last 1 safari version"
     ]
   },
-  "main": "index.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TachyonTracer/CrowdFund.git"
-  },
-  "author": "Priyansh Pankhaniya",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/TachyonTracer/CrowdFund/issues"
-  },
-  "homepage": "https://github.com/TachyonTracer/CrowdFund#readme",
-  "description": ""
+  "main": "index.js"
+  
 }

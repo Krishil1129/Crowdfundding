@@ -12,16 +12,20 @@ const Dashboard = () => {
   let { getUserData, startups, getStartups } = context;
   const [loading, setLoading] = useState(true);
   const [category, setCategory] = useState("Design and Tech")
+  const [result, setResult] = useState({})
   useEffect(() => {
     if (!localStorage.getItem('token')) {
-      navigate("/login");
+      navigate('/login');
     }
-    getUserData();
+    const response = getUserData();
     getStartups();
     setTimeout(() => {
       setLoading(false);
     }, 1000);
+    setResult(response.data)
   }, [])
+
+  console.log(result)
 
   const resourceCopy = [...startups];
   const FilteredList = resourceCopy.filter((element) => {
@@ -51,6 +55,7 @@ const Dashboard = () => {
             <div className="row gy-3">
               {(FilteredList.length === 0) && <> <h2 className="text-center my-5" style={{ color: "rgb(225, 41, 246)" }}>No Projects of this category has been here yet...</h2></>}
               {resourceList}
+              {result}
             </div>
           </div>
         </div>

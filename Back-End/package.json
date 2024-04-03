@@ -7,16 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TachyonTracer/Funding_MEAN.git"
-  },
-  "author": "Priyansh Pankhaniya",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/TachyonTracer/Funding_MEAN/issues"
-  },
-  "homepage": "https://github.com/TachyonTracer/Funding_MEAN#readme",
+  
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",

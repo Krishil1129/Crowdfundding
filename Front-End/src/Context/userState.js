@@ -126,20 +126,19 @@ const UserState = (props) => {
     }
   };
 
-  const getUserData = async () => {
-    const response = await axios
-      .get(`/getuser`, {
+  const getUserData = async() => {
+    const response = await axios.get(`/getuser`, {
         headers: {
           "Content-Type": "application/json",
           "auth-token": localStorage.getItem("token"),
-        },
+        }
       })
       .catch((error) => {
         console.log(error.response.data.error);
-      });
+      })
     setUser(response.data.data);
-  };
-  const getStartups = async () => {
+  }
+  const getStartups = async() => {
     const response = await axios.get(`/fetch-startups`, {
       headers: {
         "Content-Type": "application/json",
